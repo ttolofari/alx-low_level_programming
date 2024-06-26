@@ -20,4 +20,4 @@ int print_last_digit(int i)
 	_putchar(a + '0');
 
 	return (a);
- }
+}
