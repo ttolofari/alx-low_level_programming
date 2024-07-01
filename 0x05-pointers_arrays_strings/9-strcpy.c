@@ -5,6 +5,7 @@
  * src to dest
  * @src : source location
  * @dest : destination location
+ * Return : the destination
  */
 
 char *_strcpy(char *dest, char *src)
@@ -20,5 +21,5 @@ char *_strcpy(char *dest, char *src)
 
 	*dest = '\0';
 
-	return origin;
+	return (origin);
 }
