@@ -7,16 +7,15 @@
  * Return : output string
  */
 
-char *string_toupper(char *str)
+char *string_toupper(char *s)
 {
 	int i;
 
-	i = 0;
-	while (str[i] != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			str[i] = str[i] - 32;
-		i++;
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = s[i] - 32;
 	}
-	return (str);
+
+	return (s);
 }
