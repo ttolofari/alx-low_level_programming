@@ -9,6 +9,18 @@ int get_length(char *s);
  *
  * Return: 1 if it is, 0 it's not
  */
+int is_palindrome(char *s)
+{
+        int length = get_length(s);
+        return (is_palindrome_helper(s, 0, length - 1));
+}
+
+/**
+ * get_length - gets the length of the string
+ * @s: string to obtain s
+ *
+ * Return: length of string
+ */
 int get_length(char *s)
 {
 	if (*s == '\0')
@@ -22,10 +34,13 @@ int get_length(char *s)
 }
 
 /**
- * get_length - gets the length of the string
- * @s: string to obtain s
+ * is_palindrome_helper - helper function to check
+ * if string is palindrome recursively
+ * @s: string to check
+ * @start: position to begin
+ * @end: position to end
  *
- * Return: length of string
+ * Return: the check if palindrome
  */
 int is_palindrome_helper(char *s, int start, int end)
 {
@@ -38,19 +53,4 @@ int is_palindrome_helper(char *s, int start, int end)
 		return (0);
 	}
 	return (is_palindrome_helper(s, start + 1, end - 1));
-}
-
-/**
- * is_palindrome_helper - helper function to check
- * if string is palindrome recursively
- * @s: string to check
- * @start: position to begin
- * @end: position to end
- *
- * Return: the check if palindrome
- */
-int is_palindrome(char *s)
-{
-	int length = get_length(s);
-	return (is_palindrome_helper(s, 0, length - 1));
 }
