@@ -35,6 +35,11 @@ int _sqrt_helper(int n, int start, int end)
 	}
 }
 
+/**
+ * _sqrt_helper - helper function for the square root
+ * @start: starting point of search
+ * @end : ending point of search
+ */
 int _sqrt_recursion(int n)
 {
 	return (_sqrt_helper(n, 0, n));
