@@ -11,15 +11,14 @@ int get_length(char *s);
  */
 int get_length(char *s)
 {
-	int length;
-
-	length = 0;
-	while (*s != '\0')
+	if (*s == '\0')
 	{
-		length++;
-		s++;
+		return (0);
 	}
-	return (length);
+	else
+	{
+		return (1 + get_length(s + 1));
+	}
 }
 
 /**
