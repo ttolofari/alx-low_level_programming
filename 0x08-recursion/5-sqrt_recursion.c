@@ -8,13 +8,13 @@
  */
 int _sqrt_helper(int n, int start, int end)
 {
+	int mid;
+	long long square;
+	
 	if (start > end)
 	{
 		return (-1);
 	}
-	
-	int mid;
-	long long square;
        
 	mid = (start + end) / 2;
 	square = (long long)mid * mid;
