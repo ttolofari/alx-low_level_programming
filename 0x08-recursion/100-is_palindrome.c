@@ -12,7 +12,6 @@ int get_length(char *s);
 int is_palindrome(char *s)
 {
 	int length = get_length(s);
-	
 	return (is_palindrome_helper(s, 0, length - 1));
 }
 
