@@ -1,43 +1,6 @@
 #include <stdio.h>
-#include "main.h"
-/**
- * _myatoi - converts a sting to an integer
- * @s: supplied string
- *
- * Return: the resultant int, or 0 if not
- */
-int _myatoi(char *s)
-{
-	int i, sign, result, digit;
+#include <stdlib.h>
 
-	i = 0;
-	sign = 1;
-	result = 0;
-
-	while (s[i] == ' ')
-		i++;
-
-	if (s[i] ==  '-')
-	{
-		sign = -1;
-		i++;
-	}
-	while (s[i] != '\0')
-	{
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			digit = s[i] - '0';
-			result = result * 10 + digit;
-		}
-		else
-		{
-			break;
-		}
-		i++;
-	}
-	
-	return (sign * result);
-}
 /**
  * main - prints the minimum number of coins to
  * make change for an amount of money
@@ -59,7 +22,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	cents = _myatoi(argv[1]);
+	cents = atoi(argv[1]);
 	count = 0;
 
 
