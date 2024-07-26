@@ -5,10 +5,10 @@
 /**
  * main - This function provides simmple operation
  * based on the arguments provided in the commandline.
- * @argc : This is the number of arguments
- * @argv : This the array argument provided
+ * @argc: This is the number of arguments
+ * @argv: This the array argument provided
  *
- * Return : 0 on Success, or error on failure
+ * Return: 0 on Success, or error on failure
  */
 int main(int argc, char *argv[])
 {
